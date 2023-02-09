@@ -9,7 +9,7 @@ create table productos(
     primary key(id)
 );
 
-create user "dbuser"@"%" identified with mysql_native_password BY "Eafit2022.";
+create user "dbuser"@"%" identified with mysql_native_password BY "Eafit2023.";
 grant all privileges on tienda.* to "dbuser"@"%";
 flush privileges;
 
