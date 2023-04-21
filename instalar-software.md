@@ -17,12 +17,14 @@ ref: https://linuxhint.com/install-mysql-on-ubuntu-22-04/
 
     sudo mysql
 
-    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Eafit2022.';
+    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Eafit2023.';
     FLUSH PRIVILEGES;
     QUIT;
 
     mysql -u root -p
-    Password: Eafit2022.
+    Password: Eafit2023.
+    > Sentencias SQL
+    > quit
 
 ## 3. instalar nodejs
 

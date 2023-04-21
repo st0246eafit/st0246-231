@@ -3,7 +3,8 @@
 const mysql = require("mysql");
 // Coloca aquí tus credenciales
 module.exports = mysql.createPool({
-  host: "localhost",
+  host: "tiendaprivada.csrhitfx78ox.us-east-1.rds.amazonaws.com",
+// host: "localhost",
 // host: "host-aws-rds",
   user: "dbuser",
   password: "Eafit2023.",
