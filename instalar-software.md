@@ -26,6 +26,19 @@ ref: https://linuxhint.com/install-mysql-on-ubuntu-22-04/
     > Sentencias SQL
     > quit
 
+### conexión de mysql workbench al servidor en aws
+
+$ ssh -i "vockey1.pem" -L 3306:127.0.0.1:3306 ubuntu@ec2-54-89-21-204.compute-1.amazonaws.com
+
+consideraciones: 
+1. verificar que el puerto local no este ocupado, en este caso el 3306, si está ocupado coloque el 3307.
+
+$ ssh -i "vockey1.pem" -L 3307:127.0.0.1:3306 ubuntu@ec2-54-89-21-204.compute-1.amazonaws.com
+
+2. cambie la dirección IP pública a su propio servidor, cambie:ec2-54-89-21-204.compute-1.amazonaws.com
+
+
+
 ## 3. instalar nodejs
 
 ver pagina: https://nodejs.org/
