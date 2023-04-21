@@ -26,18 +26,16 @@ ref: https://linuxhint.com/install-mysql-on-ubuntu-22-04/
     > Sentencias SQL
     > quit
 
-### conexión de mysql workbench al servidor en aws
+### conexión de mysql workbench al servidor en aws via un Tunnel SSH
 
-$ ssh -i "vockey1.pem" -L 3306:127.0.0.1:3306 ubuntu@ec2-54-89-21-204.compute-1.amazonaws.com
+adicione esta instrucción al comando ssh: -L puertoLocal:ip:puertoAWSMysql
+
+$ ssh -i "vockey.pem" -L 3307:127.0.0.1:3306 ubuntu@ec2-54-89-21-204.compute-1.amazonaws.com
 
 consideraciones: 
-1. verificar que el puerto local no este ocupado, en este caso el 3306, si está ocupado coloque el 3307.
-
-$ ssh -i "vockey1.pem" -L 3307:127.0.0.1:3306 ubuntu@ec2-54-89-21-204.compute-1.amazonaws.com
+1. normalmente el puerto 3306 es para el servidor local, por ello, vamos a utilizar el puerto 3307 para crear el Tunel hacia amazon.
 
 2. cambie la dirección IP pública a su propio servidor, cambie:ec2-54-89-21-204.compute-1.amazonaws.com
-
-
 
 ## 3. instalar nodejs
 
