@@ -55,3 +55,27 @@ hay 2 versiones: 16.16.0 LTS y 18.7.0 Actual (esta será la de trabajo de este d
     node -v
     
     npm -v
+
+# instalar mongodb en ubuntu 22.04
+
+## ref: https://www.mongodb.com/docs/v6.0/tutorial/install-mongodb-on-ubuntu/
+
+    sudo apt-get install gnupg
+
+    curl -fsSL https://pgp.mongodb.com/server-6.0.asc | \
+    sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
+    --dearmor
+
+    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+    sudo apt-get update
+
+    sudo apt-get install -y mongodb-org
+
+    sudo systemctl enable mongod
+
+    sudo systemctl daemon-reload
+
+    sudo systemctl start mongod
+
+    mongosh
