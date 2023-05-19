@@ -32,6 +32,7 @@ app.post("/insertar", async (request, response) => {
 // URI: /productos/actualizar/{id}
 app.patch("/actualizar/:id", async (request, response) => {
     try {
+      const producto = new productoModel(request.body);
       await productoModel.findByIdAndUpdate(request.params.id, request.body);
       await productoModel.save();
       response.send(producto);
